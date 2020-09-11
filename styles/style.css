@@ -1,0 +1,140 @@
+/* Global */
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --main-font: 'Spectral', sans-serif;
+  --main-font-color: #2F2E41;
+  --red-font-color: #FF8181;
+}
+
+html {
+  font-family: var(--main-font);
+}
+
+body {
+  box-sizing: border-box;
+  color: var(--main-font-color);
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-font-color);
+}
+
+.btn {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px 40px;
+  border-radius: 5px;
+  margin: 30px;
+}
+
+p {
+  font-size: 20px;
+  margin-top: 17px;
+}
+
+/* Header */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+.logo img {
+  width: 64px;
+  height: 100%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  font-size: 20px;
+}
+
+.nav-item {
+  margin: 0 2rem;
+}
+
+.right-container {
+  color: #fff;
+  font-size: 20px;
+}
+
+.login-link {
+  position: relative;
+  margin-right: 15px;
+  color: #fff;
+}
+
+.login-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -12px;
+  width: 1px;
+  height: 30px;
+  background: #fff;
+}
+
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  align-items: center;
+}
+
+.text-wrapper {
+  position: absolute;
+  padding: 20px 80px;
+  max-width: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 813px);
+  z-index: -1;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.highlight {
+  color: var(--red-font-color);
+  font-weight: 800;
+}
+
+.outline {
+  color: var(--red-font-color);
+  border: 2px solid var(--red-font-color);
+}
+
