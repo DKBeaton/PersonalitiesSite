@@ -13,8 +13,8 @@
 
 :root {
   --main-font: 'Spectral', sans-serif;
-  --main-font-color: #2F2E41;
-  --red-font-color: #FF8181;
+  --main-font-color: #2f2e41;
+  --red-font-color: #ff8181;
 }
 
 html {
@@ -63,7 +63,7 @@ p {
 }
 
 .bold {
-  font-weight: 800;  
+  font-weight: 800;
 }
 
 /* Header */
@@ -127,27 +127,47 @@ nav {
   background: #fff;
 }
 
+.menu-toggle {
+  display: grid;
+  place-items: center;
+  color: #fff;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--main-font-color);
+  display: none;
+  opacity: 0;
+}
+
+.fa-times {
+  display: none;
+  opacity: 0;
+}
+
 /* Hero Section */
 
 .hero-section {
   display: flex;
   align-items: center;
-  height: 100%;
+  padding: 20rem 80px;
 }
 
 .text-wrapper {
-  position: absolute;
-  padding: 20px 80px;
   max-width: 50%;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: auto 0;
 }
 
 .hero-bg {
   position: absolute;
   top: 0;
+  width: 813px;
+  height: 100%;
   left: calc(100% - 813px);
   z-index: -1;
+  background-image: url('/Images/Illustration.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
 }
 
 .outline {
@@ -169,6 +189,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
+  /* margin-top: 10rem; */
 }
 
 .personalities-description {
@@ -176,7 +197,7 @@ nav {
   padding: 0 10px;
 }
 
-.personalities-description a:hover{
+.personalities-description a:hover {
   text-decoration: underline;
 }
 
@@ -210,7 +231,7 @@ nav {
   margin-top: 10px;
 }
 
-.card img{
+.card img {
   width: 100%;
   max-width: 350px;
 }
@@ -257,7 +278,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-   /* top | right | bottom | left */
+  /* top | right | bottom | left */
   margin: 20rem 0 10rem 0;
 }
 
@@ -291,7 +312,7 @@ footer {
   align-items: center;
   /* top | right | bottom | left */
   padding: 10rem 0 2rem 0;
-  background: #F5F6F7;
+  background: #f5f6f7;
 }
 
 .svg {
@@ -351,12 +372,44 @@ footer {
   text-decoration: underline;
 }
 
+/* Media Queries */
 
+@media only screen and (max-width: 1106px) {
+  .nav-list {
+    display: none;
+    opacity: 0;
+  }
 
+  .right-container {
+    display: none;
+    opacity: 0;
+  }
 
+  .menu-toggle {
+    display: grid;
+    opacity: 1;
+  }
 
+  .text-wrapper {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 5px;
+    margin-top: 0;
+  }
 
+  .hero-section {
+    flex-direction: column;
+    padding: 3rem 10px 10rem 10px;
+  }
 
+  .hero-bg {
+    display: none;
+  }
+}
 
-
-
+/* Small Screens */
+@media only screen and (max-width: 450px) {
+  nav {
+    padding: 20px 30px;
+  }
+}
