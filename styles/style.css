@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  scrollbar-width: thin;
 }
 
 :root {
@@ -26,9 +27,27 @@ body {
   height: 100vh;
 }
 
+main {
+  height: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 40px;
+}
+
 a {
   text-decoration: none;
   color: var(--main-font-color);
+}
+
+p {
+  font-size: 20px;
+  margin-top: 17px;
 }
 
 .btn {
@@ -36,12 +55,15 @@ a {
   font-size: 20px;
   padding: 10px 40px;
   border-radius: 5px;
-  margin: 30px;
+  margin: 30px 0;
 }
 
-p {
-  font-size: 20px;
-  margin-top: 17px;
+.highlight {
+  color: var(--red-font-color);
+}
+
+.bold {
+  font-weight: 800;  
 }
 
 /* Header */
@@ -80,6 +102,10 @@ nav {
   margin: 0 2rem;
 }
 
+.nav-item:hover {
+  border-bottom: 1px solid var(--red-font-color);
+}
+
 .right-container {
   color: #fff;
   font-size: 20px;
@@ -106,6 +132,7 @@ nav {
 .hero-section {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .text-wrapper {
@@ -123,18 +150,213 @@ nav {
   z-index: -1;
 }
 
-h1 {
-  font-size: 40px;
-  font-weight: 100;
-}
-
-.highlight {
-  color: var(--red-font-color);
-  font-weight: 800;
-}
-
 .outline {
   color: var(--red-font-color);
   border: 2px solid var(--red-font-color);
+  transition: 0.2s ease-in-out;
 }
+
+.btn.outline:hover {
+  background: var(--red-font-color);
+  color: #fff;
+}
+
+/* Personalities Section */
+
+.personalities-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.personalities-description {
+  max-width: 35rem;
+  padding: 0 10px;
+}
+
+.personalities-description a:hover{
+  text-decoration: underline;
+}
+
+.personalities-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  flex: 0 1 350px;
+  margin: 20px 30px;
+  box-shadow: 0 10px 50px 5px #f5f5f5;
+  border-radius: 10px;
+}
+
+.card:nth-child(1) {
+  border-top: 5px solid var(--main-font-color);
+}
+
+.card:nth-child(2) {
+  border-top: 5px solid var(--red-font-color);
+}
+
+.card:nth-child(3) {
+  border-top: 5px solid var(--main-font-color);
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card img{
+  width: 100%;
+  max-width: 350px;
+}
+
+.card p {
+  text-align: left;
+  /* top | right | bottom | left */
+  padding: 5px 40px 20px 40px;
+}
+
+/* Information Section */
+
+.information-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10rem 0;
+  padding: 10px;
+}
+
+.image-container {
+  flex: 0 1 450px;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.information-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 0 1 450px;
+  margin-top: 2rem;
+}
+
+/* Sign-up Section */
+
+.sign-up-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+   /* top | right | bottom | left */
+  margin: 20rem 0 10rem 0;
+}
+
+.sign-up-section h2 {
+  margin: 0 3rem;
+}
+
+.sign-up-section .btn {
+  margin: 2rem 3rem;
+}
+
+.filled {
+  background: var(--red-font-color);
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.btn.filled:hover {
+  background: transparent;
+  border: 2px solid var(--red-font-color);
+  color: var(--red-font-color);
+}
+
+/* Footer */
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  /* top | right | bottom | left */
+  padding: 10rem 0 2rem 0;
+  background: #F5F6F7;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  height: 120px;
+  width: 100%;
+}
+
+.c1 {
+  fill: #fff;
+}
+
+.footer-bg {
+  display: block;
+  width: 100%;
+  height: 140px;
+  fill: #fff;
+}
+
+.socials i {
+  font-size: 1.5rem;
+  padding: 0 5px;
+  transition: font-size 0.3s ease-in-out;
+}
+
+.socials i:hover {
+  font-size: 1.7rem;
+}
+
+.fa-facebook-square {
+  color: #43599a;
+}
+
+.fa-twitter {
+  color: #58aae9;
+}
+
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.footer-item {
+  margin: 0 15px;
+}
+
+.footer-link {
+  color: var(--red-font-color);
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
 
