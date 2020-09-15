@@ -151,10 +151,10 @@ nav {
   content: '';
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 5px;
   transform: translateY(-30%);
   pointer-events: none;
-  border: 10px solid transparent;
+  border: 8px solid transparent;
   border-top-color:  #fff;
 }
 
@@ -479,6 +479,14 @@ footer {
     color: var(--main-font-color);
   }
 
+  select {
+    color: var(--main-font-color);
+  }
+
+  .custom-select::before {
+    border-top-color:   var(--main-font-color);
+  }
+
   .login-link {
     color: var(--main-font-color);
   }
@@ -520,18 +528,6 @@ footer {
     opacity: 1;
   }
 
-  /* .mobile-menu.active {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    background: #fff;
-    opacity: 1;
-  } */
 }
 
 /* Small Screens */
