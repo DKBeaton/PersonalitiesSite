@@ -102,11 +102,14 @@ nav {
   margin: 0 2rem;
 }
 
-.nav-item:hover {
-  border-bottom: 1px solid var(--red-font-color);
+.nav-item:hover .nav-link{
+ color: var(--red-font-color);
 }
 
 .right-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   color: #fff;
   font-size: 20px;
 }
@@ -125,6 +128,32 @@ nav {
   width: 1px;
   height: 30px;
   background: #fff;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-30%);
+  pointer-events: none;
+  border: 10px solid transparent;
+  border-top-color:  #fff;
+}
+
+select {
+  padding: 5px 10px;
+  background: transparent;
+  border: none;
+  font-family: var(--main-font);
+  font-size: 20px;
+  color: #fff;
+  appearance: none;
+  cursor: pointer;
 }
 
 .menu-toggle {
