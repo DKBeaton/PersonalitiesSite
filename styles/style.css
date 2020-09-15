@@ -38,6 +38,19 @@ h1 {
 
 h2 {
   font-size: 40px;
+  position: relative;
+}
+
+h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  border-radius: 20px;
+  width: 50%;
+  height: 100%;
+  background: #FF8181;
+  opacity: 0.05;
 }
 
 a {
